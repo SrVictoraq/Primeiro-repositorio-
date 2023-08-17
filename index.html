@@ -1,0 +1,80 @@
+<html> 
+     <head>
+        <style>
+
+            body {
+                        display: flex;
+                        justify-content: center;
+                        height: 100vh;
+
+            }
+
+            a {
+                text-decoration: none;
+                color: #ff0000;
+            }
+            .box {
+                font-size: 90px;
+                color:rgb(255, 255, 255);
+                height: 1080px;
+                width: 1920px;
+                border-radius: 90px;
+                background: #191919;
+                flex-direction: column;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                
+            }
+
+            .buttons-container {
+                display: flex;
+                justify-content: space around;
+                height: 90px;
+                width: 190px;
+                
+                
+            }
+            button {
+                height: 110px;
+                width: 290px;
+                background:white
+                border-radius: 100px;
+                color: #0084ff;
+                font-weight: 800 ;
+                color: red; 
+                
+
+            }
+        </style>
+     </head>
+     <body>
+        <div class="box">
+                <p>      Você qr namorar comigo?
+                    <br>
+                          (te amo mt)    </p>
+                              ❤
+
+            <dilv class-"buttons-container">
+                <button>
+                    <a href="https://vm.tiktok.com/ZM2E8oC8o/"> <h1> SIM </h1></a>
+                </button>
+                <button id="no"> <h1> NÃO  </h1> </button>
+                
+
+                        
+            </dilv>
+        </dilv>     
+     </body>
+     <script>
+        let button = document.getElementById('no');
+        let height = window.innerHeight - 100;
+        let width = window.innerWidth - 100;
+
+        button.addEventListener('mouseover', function () {
+            button.style.position = 'absolute';
+            button.style.top = Math.random() * height + "px";
+            button.syle.left = Math.random() * width +  "px";
+ 
+            })
+     </script>
