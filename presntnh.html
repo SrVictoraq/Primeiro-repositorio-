@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crtdamr1</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  
+    <button class="continue-btn" style="display: none;" onclick="redirectToVideo()">Continuar</button>
+
+    <div class="container">
+        <div class="envelope" onclick="openLetter()">
+            <div class="flap"></div>
+            <img src="coraçao.png.png" alt="coração"
+            class="heart"> 
+            <div class="message">Clique no coraçao</div>
+        </div>
+        <div class="letter">
+            <div class="shine"></div>
+            <p>Meu Bem,</p>
+            <p>Você é uma mulher incrivel e uma otima namorada. Cada momento com você é um presente que guardo com carinho no meu coração. Te amo incondicionalmente!</p>
+            Com todo carinho Victor (: 
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
+
+<style>
+
+
+.continue-btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    color: white;
+    background-color: #ff69b4;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.continue-btn:hover {
+    background-color: #ff1493;
+}
+
+body {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(to right, #ffecd2, #fc9ffc);
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    margin: 0;
+}
+
+.container {
+    position: relative;
+    width: 300px;
+    height: 220px;
+    perspective: 10000px;
+}
+
+.envelope {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #fff8e1;
+    border: 2px solid #000;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    text-align: center;
+    cursor: pointer;
+    transform-style: preserve-3d;
+    transition: transform 1s ease-in-out;
+}
+
+.envelope .flap {
+    position: absolute;
+    width: 100%;
+    height: 50%;
+    background-color: #fff8e1;
+    border-bottom: 2px solid #000;
+    top: 0;
+    left: 0;
+    transform-origin: top;
+    transition: transform 1s ease-in-out;
+}
+
+.envelope .heart {
+    width: 50px;
+    height: 50px;
+    margin: 50px auto 0;
+    position: relative;
+    animation: heartbeat 1.5s infinite;
+}
+
+@keyframes heartbeat {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.2); }
+}
+
+.envelope .message {
+    margin-top: 20px;
+    font-size: 18px;
+    color: #555;
+}
+
+.letter {
+    display: none;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    padding: 10px;
+    box-sizing: border-box;
+    font-size: 15px;
+    color: #333;
+}
+
+.letter .shine {
+    position: absolute;
+    top: 0;
+    left: -75%;
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.8), transparent);
+    animation: shine 2s infinite;
+}
+
+@keyframes shine {
+    0% {
+        left: -75%;
+    }
+    100% {
+        left: 100%;
+    }
+}
+
+
+</style>
+
+<script>
+{
+    function redirectToVideo() {
+    window.location.href = 'https://www.youtube.com/watch?v=seu_video';
+}
+
+function openLetter() {
+    const envelope = document.querySelector('.envelope');
+    const letter = document.querySelector('.letter');
+
+    envelope.style.transform = 'rotateY(180deg)';
+    setTimeout(() => {
+        letter.style.display = 'block';
+        setTimeout(() => {
+            document.querySelector('.continue-btn').style.display = 'inline-block';
+        }, 5000); // Exibir o botão após 5 segundos
+    }, 1000); // Exibir a carta após 1 segundo
+}
+}
+
+</script>
